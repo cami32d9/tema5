@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godmorgen</title>
+</head>
+<body>
+    <script>
+
+            let currentHour = new Date().getHours();
+
+            if (currentHour > 0 && currentHour < 5) {
+                alert(`Godaften`);
+            }
+            else if (currentHour >= 5 && currentHour < 10) {
+                alert('Godmorgen');
+            }
+            else if (currentHour >= 10 && currentHour < 18) {
+                alert(`Godaften`);
+            }
+            else if (currentHour >= 18) {
+                alert(`Godaften`);
+            }
+
+            console.log(currentHour);
+
+    </script>
+</body>
+</html>
