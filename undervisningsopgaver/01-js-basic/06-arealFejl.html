@@ -13,25 +13,25 @@
         function areaFunction(l, w) {
             let area = (l * w);
             if (area == 0) {
-                return(`Husk at indsætte tal over 0. Prøv igen.`);
+                if (confirm(`Husk at indsætte tal over 0. Prøv igen.`)) {
+                    location.reload();
+                }
             }
             else if (isNaN(area)) {
-                return(`Du må kun indsætte tal. Prøv igen.`);
+                if (confirm(`Du må kun indsætte tal. Prøv igen.`)) {
+                    location.reload();
+                }
             }
             else {
-                return(`Det er ${area}`);
+                if (confirm(`Arealet er ${area}`)) {
+                    location.reload();
+                }
             }
         }
 
         let result = areaFunction(length,width);
 
         console.log(result);
-
-        confirm(result);
-
-        if (confirm) {
-            location.reload();
-        }
 
     </script>
 </body>
