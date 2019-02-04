@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areal-opgave</title>
+</head>
+<body>
+    <script>
+        const length = 540;
+        const width = 5;
+        const area = length*width;
+        let resultat;
+        console.log("Arealet er " + area);
+
+        if (area < 100) {
+            resultat = "Arealet er for lille";
+        }
+        else if (area > 100 && area < 200) {
+            resultat = "Arealet er ok";
+        }
+        else if (area > 200) {
+            resultat = "Arealet er for stort";
+        }
+        console.log(resultat);
+    </script>
+</body>
+</html>
