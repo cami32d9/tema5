@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areal-opgave</title>
+</head>
+<body>
+    <script>
+        const height = 1.80;
+        const weight = 400;
+        let fedmeklasse;
+        const bmi = Math.round(weight/(height*height));
+
+
+        if (bmi <= 19) {
+            fedmeklasse = "undervægtig";
+        }
+        else if (bmi >= 20 && bmi < 25) {
+            fedmeklasse = "normalvægtig";
+        }
+
+        else if (bmi >= 25 && bmi < 30) {
+            fedmeklasse = "overvægtig";
+        }
+        else if (bmi >= 30 && bmi < 35) {
+            fedmeklasse = "fed";
+        }
+        else if (bmi >= 35 && bmi < 40) {
+            fedmeklasse = "svært fed";
+        }
+        else if (bmi > 40) {
+            fedmeklasse = "ekstrem fedme";
+        }
+
+
+        console.log("Bmi'en er " + bmi + ", fedmeklasse: " + fedmeklasse);
+
+    </script>
+</body>
+</html>
