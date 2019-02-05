@@ -44,6 +44,15 @@
             font-size: 10vw;
             border: 5px solid tomato;
             cursor: pointer;
+            background-size: cover;
+        }
+
+        .happy {
+            background-image: url("https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+        }
+
+        .angry {
+            background-image: url(https://images.pexels.com/photos/693785/pexels-photo-693785.jpeg?auto=compress&cs=tinysrgb&h=650&w=940);
         }
     </style>
 
@@ -57,7 +66,7 @@
         </header>
         <main>
             <section>
-                <div id="box"> </div>
+                <div id="box" class="happy"> </div>
             </section>
         </main>
         <footer>
@@ -76,6 +85,27 @@
     </div>
 
     <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        let box = document.querySelector("#box");
+
+        function start() {
+            box.addEventListener("click", goAngry);
+        }
+
+        function goAngry() {
+            box.classList.remove("happy");
+            box.classList.add("angry");
+            box.removeEventListener("click", goAngry);
+            box.addEventListener("click", goHappy);
+        }
+
+        function goHappy() {
+            box.classList.remove("angry");
+            box.classList.add("happy");
+            box.removeEventListener("click", goHappy);
+            box.addEventListener("click", goAngry);
+        }
 
     </script>
 </body>
