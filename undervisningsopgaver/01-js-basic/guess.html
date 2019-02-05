@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <script>
+        let randomNumber = Math.floor(Math.random() * 21);
+        let guesses = 0;
+
+        console.log(randomNumber);
+
+        let randomGuess = prompt("Gæt et tal mellem 0 og 20!");
+        compareGuess();
+
+        function compareGuess() {
+            guesses++;
+            if (randomGuess < randomNumber) {
+
+                randomGuess = prompt("Tallet var for lavt. Prøv et nyt tal.");
+                compareGuess();
+            }
+            else if (randomGuess > randomNumber) {
+                randomGuess = prompt("Tallet var for højt. Prøv et nyt tal.");
+                compareGuess();
+            }
+            else {
+                if (confirm("Det var det rigtige tal! Du brugte " + guesses + " forsøg. \n Vil du prøve igen?")) {
+                    location.reload();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
