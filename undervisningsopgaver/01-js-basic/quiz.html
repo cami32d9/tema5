@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <script>
+        let points = 0;
+
+        function compareAnswer(x,y) {
+            if (x == y) {
+                alert("Tillykke! Du svarede rigtigt!");
+                points++;
+            }
+            else {
+                alert ("Desværre, det var ikke rigtigt");
+            }
+        }
+
+        let q1 = prompt("Hvad er 1 + 2?");
+        const q1a = 3;
+        compareAnswer(q1,q1a);
+
+        let q2 = prompt("Hvad er 2 + 2?");
+        const q2a = 4;
+        compareAnswer(q2,q2a);
+
+        let q3 = prompt("Hvad er 3 + 3?");
+        const q3a = 6;
+        compareAnswer(q3,q3a);
+
+        let q4 = prompt("Hvad er 4 + 4?");
+        const q4a = 8;
+        compareAnswer(q4,q4a);
+
+        let q5 = prompt("Hvad er 5 + 5?");
+        const q5a = 10;
+        compareAnswer(q5,q5a);
+
+        alert("Du fik " + points + " point.");
+    </script>
+</body>
+</html>
