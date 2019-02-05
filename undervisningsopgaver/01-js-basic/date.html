@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dating</title>
+</head>
+<body>
+    <script>
+
+        let myAge = prompt("Hvor gammel er du?");
+        let dateAge = prompt("Hvor gammel er din date?");
+
+        if (myAge < 15) {
+            alert("Ups! Du er vidst ikke gammel nok til at date. Prøv igen senere.")
+        }
+        else if (dateAge < 15) {
+            alert("Ups! Din \"date\" er vidst ikke gammel nok til at date! Puha!")
+        }
+
+        let myPerfectAge = Math.floor(myAge / 2 + 7);
+        let datePerfectAge = Math.floor(dateAge / 2 + 7);
+
+        console.log(myPerfectAge);
+        console.log(datePerfectAge);
+
+        if (myAge > datePerfectAge && dateAge > myPerfectAge) {
+            alert("Tillykke! Jeres aldre passer perfekt sammen.")
+        }
+        else if (myAge < datePerfectAge) {
+            alert("Uh-oh. Din date er vidst for gammel til dig. Desværre!")
+        }
+        else if (dateAge < myPerfectAge) {
+            alert("Uh-oh. Din date er vidst ikke gammel nok til dig. Desværre!");
+        }
+    </script>
+</body>
+</html>
