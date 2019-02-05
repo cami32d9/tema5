@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+</head>
+<body>
+    <div id="content">
+        <div><a href="https://kea.dk/">KEA</a></div>
+        <div><a href="https://github.com/cami32d9">GitHub</a></div>
+        <div><img src="http://helf-kea.dk/test/frog.png"></div>
+    </div>
+
+    <script>
+        console.log(document.querySelector("#content"));
+
+        console.log(document.querySelector("#content div"));
+        console.log(document.querySelector("#content div a"));
+        console.log(document.querySelector("#content div + div"));
+        console.log(document.querySelector("#content div + div a"));
+        console.log(document.querySelector("#content div + div + div"));
+        console.log(document.querySelector("img"));
+
+    </script>
+</body>
+</html>
