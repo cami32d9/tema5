@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A</title>
+    <style>
+        .typo {
+            font-family: monospace;
+            color: darkblue;
+            line-height: 150%;
+        }
+        .typo2 {
+            font-family: monospace;
+            color: darkblue;
+            line-height: 150%;
+            font-size: 2rem;
+        }
+        .reset {
+            display: inline-block;
+            background-color: darkgrey;
+            width: 50px;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reset">Reset</div>
+    <h3>En</h3>
+    <p>Gochujang blue bottle iPhone quinoa, umami lumbersexual semiotics disrupt coloring book squid. Tilde banjo flannel PBR&B umami vape plaid occupy prism lumbersexual man braid. </p>
+    <h3>Lille</h3>
+    <p>Fam before they sold out edison bulb, la croix sartorial cray poke yuccie copper mug ugh. Kickstarter yr tumblr synth.</p>
+    <h3>Bitte</h3>
+    <p>Selvage authentic heirloom put a bird on it umami sustainable bitters meh bicycle rights kombucha af squid. DIY air plant drinking vinegar XOXO raw denim ethical semiotics. </p>
+    <h3>Smule</h3>
+    <p>Roof party tumeric next level etsy church-key plaid. Fashion axe deep v tumeric kickstarter tofu narwhal direct trade. Hexagon gentrify pitchfork ethical echo park. </p>
+    <h3>Tekst</h3>
+    <p>Hella unicorn pinterest organic. Hot chicken activated charcoal chia you probably haven't heard of them slow-carb fingerstache microdosing sartorial four loko etsy yr locavore. Edison bulb trust fund try-hard salvia direct trade tbh.</p>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        let p1 = document.querySelector("p");
+        let p2 = document.querySelector("p + h3 + p");
+        let p3 = document.querySelector("p + h3 + p + h3 + p");
+        let p4 = document.querySelector("p + h3 + p + h3 + p + h3 + p");
+        let p5 = document.querySelector("p + h3 + p + h3 + p + h3 + p + h3 + p");
+
+        let h31 = document.querySelector("h3");
+        let h32 = document.querySelector("h3 + p + h3");
+        let h33 = document.querySelector("h3 + p + h3 + p + h3");
+        let h34 = document.querySelector("h3 + p + h3 + p + h3 + p + h3");
+        let h35 = document.querySelector("h3 + p + h3 + p + h3 + p + h3 + p + h3");
+
+        function start() {
+            console.log("DOM'en er loadet");
+            document.querySelector(".reset").addEventListener("click", removeTypos);
+            p1.addEventListener("click", addTypo);
+            p2.addEventListener("click", addTypo);
+            p3.addEventListener("click", addTypo);
+            p4.addEventListener("click", addTypo);
+            p5.addEventListener("click", addTypo);
+            h31.addEventListener("click", addTypo2);
+            h32.addEventListener("click", addTypo2);
+            h33.addEventListener("click", addTypo2);
+            h34.addEventListener("click", addTypo2);
+            h35.addEventListener("click", addTypo2);
+        }
+
+        function addTypo() {
+            this.classList.add("typo");
+        }
+
+        function addTypo2() {
+            this.classList.add("typo2");
+        }
+
+        function removeTypos() {
+            document.querySelectorAll("p").forEach(element => {
+                element.classList.remove("typo");
+            });
+            document.querySelectorAll("h3").forEach(element => {
+                element.classList.remove("typo2");
+            });
+        }
+
+    </script>
+</body>
+
+</html>
