@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+
+    <style>
+        #square {
+            width: 200px;
+            height: 200px;
+            background-color: forestgreen;
+            text-align: center;
+            line-height: 200px;
+        }
+        #circle {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 10000px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="content">
+        <div id="square"></div>
+        <div id="circle"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        let circle = document.querySelector("#circle");
+        let square = document.querySelector("#square");
+
+        function start() {
+            console.log("DOM'en er loadet");
+            square.innerHTML = `<img src="http://helf-kea.dk/test/frog.png">`;
+            circle.innerHTML = `<img src="http://helf-kea.dk/test/gris.png">`;
+            square.addEventListener("click", circleUp);
+            circle.addEventListener("click", circleDown);
+        }
+
+        function circleUp() {
+            circle.style.position = "absolute";
+            circle.style.top = "8px";
+        }
+
+        function circleDown() {
+            circle.style.position = "static";
+        }
+
+    </script>
+</body>
+</html>
