@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Objekter</title>
+</head>
+
+<body>
+    <div id="empty"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        let dyr = [
+            {"navn" : "gris", "type" : "pattedyr", "billede" : "http://helf-kea.dk/test/gris.png", "levested" : "svinefarmen"},
+            {"navn" : "frø", "type" : "amfibie", "billede" : "http://helf-kea.dk/test/frog.png", "levested" : "vandhullet"},
+            {"navn" : "ræv", "type" : "pattedyr", "billede" : "http://helf-kea.dk/test/fox.png", "levested" : "skoven"},
+            {"navn" : "sild", "type" : "fisk", "billede" : "http://helf-kea.dk/test/sild.jpg", "levested" : "havet"},
+            {"navn" : "krokodikke", "type" : "krybdyr", "billede" : "http://helf-kea.dk/test/kroko.jpg", "levested" : "floden"}
+    ];
+
+        let dyrBox = document.querySelector("#empty");
+
+        function start() {
+            dyr.forEach(etDyr => {
+                dyrBox.innerHTML +=
+                    `<div class="dyribox">
+                    <h3>${etDyr.navn}</h3> <img src="${etDyr.billede}" alt="etDyr.navn"> <p>${etDyr.type}</p> <p>${etDyr.levested}</p><br>
+                </div>`;
+            })
+
+            let dyrIBox = document.querySelectorAll(".dyribox");
+            dyrIBox.forEach(enBox =>
+                enBox.style.border = "1px solid black"
+            )
+        }
+
+    </script>
+    
+</body>
+</html>
