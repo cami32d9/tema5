@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Objekter</title>
+</head>
+
+<body>
+    <div id="empty"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        let news = [
+            {
+                "title": "God dialog med DMI om klar kommunikation af varsling og prognoser for vandstandsstigninger",
+                "description": "DMI, Østsjællands Beredskab og Roskilde Kommune har på et møde diskuteret, hvordan varslinger og prognoser bliver bedre kommunikeret og lettere at afkode for borgere, beredskab og kommune.",
+                "date": "6. februar 2019",
+                "image": "https://dit-roskilde.dk/wp-content/uploads/2019/01/Forh%C3%B8jet-vandstand-oversv%C3%B8mmelse-Roskilde-Havn-abw-10-200x150.jpg"
+            },
+            {
+                "title": "Tegnekonkurrence for de mindste og glemte genbrugsskatte for de voksne",
+                "description": "Hos Kirppu Roskilde på Industrivej 29 B er du næsten altid sikker på at kunne finde glemte genbrugsskatte til attraktive priser. I vinterferien er der desuden tegnekonkurrence for de mindste.",
+                "date": "6. februar 2019",
+                "image": "https://dit-roskilde.dk/wp-content/uploads/2019/02/tegn-loppen-louie-kirppu-300x300-200x150.png"
+            },
+            {
+                "title" : "Danskerne er markant mindre aktive ude om vinteren",
+                "description" : "Undersøgelsen Danskernes Friluftsliv viser, at vi i høj grad bliver inden døre om vinteren – og det er helt unødvendigt, mener Friluftsrådet, der samtidig kommer med gode ideer til udendørs vinteraktiviteter for både børn og voksne. Der er ingen grund til at blive inden døre, bare fordi det er koldt derude. Sådan lyder det fra Friluftsrådet.",
+                "date" : "6. februar 2019",
+                "image" : "https://dit-roskilde.dk/wp-content/uploads/2019/02/IMG_0008-200x150.jpg"
+            },
+            {
+                "title" : "Borgerne skal give ældreplejen karakterer",
+                "description" : "Hvor tilfredse er borgere, der får hjemmehjælp eller bor på plejehjem egentlig med den hjælp, de får? Det bliver nu kortlagt i en brugerundersøgelse, som skal sikre et højt serviceniveau alle steder i kommunen. Det oplyses i en pressemeddelse.",
+                "date" : "6. februar 2019",
+                "image" : "https://dit-roskilde.dk/wp-content/uploads/2019/01/h%C3%A5nd-i-h%C3%A5nd-h%C3%A6nder-k%C3%A6rlighed-sammenhold-f%C3%B8dder-abw-1-200x150.jpg"
+            },
+            {
+                "title" : "Politirapporten",
+                "description" : "Her kan du se de uddrag af den seneste politirapport, der omhandler Roskilde Kommune i tidsrummet 2019/01/28 til 2019/02/05.",
+                "date" : "5. februar 2019",
+                "image" : "https://dit-roskilde.dk/wp-content/uploads/2019/02/Politi-Jesper-Thode-Larsen-1-200x150.jpg"
+            }
+        ];
+
+        let dyrBox = document.querySelector("#empty");
+
+        function start() {
+            news.forEach(newsArticle => {
+                dyrBox.innerHTML +=
+                    `<div class="newsbox">
+<div class="image_box">
+                    <img src="${newsArticle.image}" alt="newsArticle.title">
+                    </div>
+                    <div class="info_box">
+                    <h1>${newsArticle.title}</h1>
+                    <p>${newsArticle.description}</p>
+                    <small>${newsArticle.date} &nbsp; —</small>
+                </div>
+                </div>`;
+            });
+
+            document.querySelector("html").style.fontFamily = "sans-serif";
+
+            let newsBox = document.querySelectorAll(".newsbox");
+            newsBox.forEach((aBox, index) => {
+                    aBox.style.display = "flex";
+                    aBox.style.border = "1px solid lightgrey";
+                    if (index !== 0) {
+                        aBox.style.borderTop = "0";
+                    }
+
+                    aBox.style.marginLeft = "20px";
+                    aBox.style.padding = "20px";
+                    aBox.style.maxWidth = "60%";
+                }
+            );
+
+            document.querySelectorAll(".image_box").forEach(imageBox => {
+                imageBox.style.marginRight = "20px"
+                }
+            );
+
+            document.querySelectorAll("h1").forEach(heading => {
+                console.log(heading);
+                heading.style.margin = "0";
+                heading.style.fontWeight = "100";
+                heading.style.fontSize = "1.5rem";
+                heading.addEventListener("mouseover", function() {
+                    this.style.color = "red";
+                });
+                heading.addEventListener("mouseout", function() {
+                    this.style.color = "black";
+                })
+            });
+
+            document.querySelectorAll("small").forEach(smallText => {
+                smallText.style.color = "grey";
+                });
+        }
+
+    </script>
+
+</body>
+</html>
