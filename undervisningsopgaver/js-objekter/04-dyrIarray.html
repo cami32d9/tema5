@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Objekter</title>
+</head>
+
+<body>
+    <div id="empty"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        let dyr = [
+            {"navn" : "gris", "type" : "pattedyr", "billede" : "http://helf-kea.dk/test/gris.png", "levested" : "svinefarme"},
+            {"navn" : "frø", "type" : "amfibie", "billede" : "http://helf-kea.dk/test/frø.png", "levested" : "søer"},
+            {"navn" : "ræv", "type" : "pattedyr", "billede" : "http://helf-kea.dk/test/fox.png", "levested" : "skov"},
+            {"navn" : "sild", "type" : "fisk", "billede" : "http://helf-kea.dk/test/sild.jpg", "levested" : "hav"},
+            {"navn" : "krokodikke", "type" : "krybdyr", "billede" : "http://helf-kea.dk/test/kroko.jpg", "levested" : "vandkant"}
+    ];
+
+        function start() {
+            dyr.forEach(etDyr => {
+                console.log(`Dyr: ${etDyr.navn}, type: ${etDyr.type}, levested: ${etDyr.levested}`);
+            })
+        }
+
+    </script>
+    
+</body>
+</html>
