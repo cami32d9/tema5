@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Objekter</title>
+    <style>
+        #show_more {
+            display: inline-block;
+            border: 1px solid black;
+            background-color: lightgrey;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="empty"></div>
+    <div id="show_more">Vis flere dyr</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        let dyr = [
+            {
+                "navn": "gris",
+                "type": "pattedyr",
+                "billede": "http://helf-kea.dk/test/gris.png",
+                "levested": "svinefarmen"
+            },
+            {
+                "navn": "frø",
+                "type": "amfibie",
+                "billede": "http://helf-kea.dk/test/frog.png",
+                "levested": "vandhullet"
+            },
+            {
+                "navn": "ræv",
+                "type": "pattedyr",
+                "billede": "http://helf-kea.dk/test/fox.png",
+                "levested": "skoven"
+            },
+            {
+                "navn": "sild",
+                "type": "fisk",
+                "billede": "http://helf-kea.dk/test/sild.jpg",
+                "levested": "havet"
+            },
+            {
+                "navn": "krokodikke",
+                "type": "krybdyr",
+                "billede": "http://helf-kea.dk/test/kroko.jpg",
+                "levested": "floden"
+            }
+        ];
+
+        let dyrLength = dyr.length;
+        let dyrNumber = 2;
+
+        let dyrBox = document.querySelector("#empty");
+        let button = document.querySelector("#show_more");
+
+        function start() {
+            showArray();
+            console.log("Showing array once");
+            button.addEventListener("click", function () {
+                resetArray();
+                dyrNumber += 2;
+                showArray();
+            })
+        }
+
+        let showDyr = dyr.slice(0, dyrNumber);
+
+        function resetArray() {
+            dyrBox.innerHTML = "";
+        }
+
+        function showArray() {
+            showDyr.forEach(etDyr => {
+                console.log(dyrNumber);
+                dyrBox.innerHTML +=
+                    `<div class="dyribox">
+                    <h3>${etDyr.navn}</h3> <img src="${etDyr.billede}" alt="etDyr.navn"> <p>${etDyr.type}</p> <p>${etDyr.levested}</p><br>
+                </div>`;
+            });
+
+            let dyrIBox = document.querySelectorAll(".dyribox");
+            dyrIBox.forEach(enBox =>
+                enBox.style.border = "1px solid black"
+            )
+        }
+
+    </script>
+
+</body>
+</html>

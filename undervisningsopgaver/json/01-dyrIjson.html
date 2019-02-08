@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Objekter</title>
+    <style>
+        #empty {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="empty"></div>
+
+    <script>
+
+        let dyr = [];
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+            console.log("start");
+
+            let dyrBox = document.querySelector("#empty");
+
+            async function getJson() {
+                console.log("getJson");
+                let jsonData = await fetch("dyr.json");
+                dyr = await jsonData.json();
+                visDyr();
+            }
+
+            function visDyr() {
+                console.log("visDyr");
+                dyr.forEach(etDyr => {
+                    dyrBox.innerHTML +=
+                        `<div class="dyribox">
+                    <h3>${etDyr.navn}</h3>
+                    <img src="${etDyr.billede}" alt="etDyr.navn">
+                    <p>${etDyr.type}</p>
+                    <p>${etDyr.levested}</p>
+                    <br>
+                </div>`;
+                });
+            }
+
+            getJson();
+
+            let dyrIBox = document.querySelectorAll(".dyribox");
+            dyrIBox.forEach(enBox =>
+                enBox.style.border = "1px solid black"
+            )
+        }
+
+
+    </script>
+
+</body>
+</html>
