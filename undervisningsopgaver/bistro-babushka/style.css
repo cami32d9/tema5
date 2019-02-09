@@ -1,0 +1,30 @@
+html {
+    font-family: sans-serif;
+    background-color: cornflowerblue;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    padding: 10px 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: lightcyan;
+    padding: 30px;
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

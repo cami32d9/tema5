@@ -13,6 +13,10 @@
             padding: 10px;
             margin-top: 10px;
         }
+        #empty {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
     </style>
 </head>
 
@@ -57,30 +61,39 @@
         ];
 
         let dyrLength = dyr.length;
-        let dyrNumber = 2;
+        let dyrStart;
+        let showDyr;
+
 
         let dyrBox = document.querySelector("#empty");
         let button = document.querySelector("#show_more");
 
+
         function start() {
-            showArray();
+            resetArray();
             console.log("Showing array once");
             button.addEventListener("click", function () {
-                resetArray();
-                dyrNumber += 2;
+                if (dyrStart+2 >= dyrLength) {
+                    resetArray();
+                }
+                else {
+                dyrStart += 2;
+                showDyr = dyr.slice(dyrStart, dyrStart+2);
                 showArray();
-            })
+                console.log(dyrStart);
+                }
+            });
         }
-
-        let showDyr = dyr.slice(0, dyrNumber);
 
         function resetArray() {
             dyrBox.innerHTML = "";
+            dyrStart = 0;
+            showDyr = dyr.slice(dyrStart, 2);
+            showArray();
         }
 
         function showArray() {
             showDyr.forEach(etDyr => {
-                console.log(dyrNumber);
                 dyrBox.innerHTML +=
                     `<div class="dyribox">
                     <h3>${etDyr.navn}</h3> <img src="${etDyr.billede}" alt="etDyr.navn"> <p>${etDyr.type}</p> <p>${etDyr.levested}</p><br>
@@ -89,7 +102,7 @@
 
             let dyrIBox = document.querySelectorAll(".dyribox");
             dyrIBox.forEach(enBox =>
-                enBox.style.border = "1px solid black"
+                enBox.style.border = "1px solid lightgrey"
             )
         }
 
