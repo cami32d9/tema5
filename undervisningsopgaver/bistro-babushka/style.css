@@ -1,6 +1,10 @@
 html {
     font-family: sans-serif;
-    background-color: cornflowerblue;
+    background-color: lightcyan;
+}
+
+img {
+    width: 100%;
 }
 
 body {
@@ -14,17 +18,53 @@ header {
     font-size: 4rem;
     color: white;
     padding: 10px 0;
+    background-color: cornflowerblue;
 }
 
 main {
     max-width: 1200px;
     margin: 0 auto;
-    height: 100vh;
-    background-color: lightcyan;
-    padding: 30px;
+    padding: 0 30px 30px 30px;
 }
 
 #menu {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*----- Navigation -----*/
+
+nav {
+    margin: 20px 35px;
+}
+
+button {
+    padding: 5px;
+    font-size: 1.2rem;
+
+}
+
+/*----- Dishes -----*/
+
+.dish_container {
+    background-color: lightsteelblue;
+    margin: 5px;
+}
+
+h2 {
+    margin: 5px 0 0 5px;
+}
+
+.origin {
+    font-style: italic;
+    margin-left: 5px;
+}
+
+p {
+    margin-left: 5px;
+}
+
+.price {
+    font-weight: bold;
+    margin: 5px;
 }
