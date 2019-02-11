@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Objekter</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+        }
+
+        #empty {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .person_box {
+            border: 1px solid lightgrey;
+            padding: 10px;
+        }
+
+        .menu {
+            text-align: center;
+        }
+
+        .filter {
+            margin: 15px 2px;
+            padding: 5px;
+        }
+
+        .valgt {
+            background-color: cornflowerblue;
+        }
+
+        .filter_title {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="filter_title">
+        <h1>Alle</h1>
+    </div>
+    <div class="menu">
+        <button class="filter valgt" data-hold="alle">Alle</button>
+        <button class="filter" data-hold="a">Hold A</button>
+        <button class="filter" data-hold="b">Hold B</button>
+    </div>
+
+    <div id="empty"></div>
+
+    <script>
+
+        let persons = [];
+        let filter = "alle";
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+            console.log("start");
+
+            let emptyDiv = document.querySelector("#empty");
+
+            async function getJson() {
+                console.log("getJson");
+                let jsonData = await fetch("personer.json");
+                persons = await jsonData.json();
+                showPersons();
+            }
+
+            function showPersons() {
+                emptyDiv.innerHTML = "";
+                console.log("visDyr");
+                persons.forEach(person => {
+                    if (filter == "alle" || person.hold == filter) {
+                        console.log("no 1" + filter);
+                        emptyDiv.innerHTML +=
+                            `<div class="person_box">
+                    <h2>${person.navn}</h2>
+                    <img src="${person.billede}" alt="personbillede">
+                    <br> <br>
+                    <a href="https://github.com/${person.github}" target="_blank">Github-konto: ${person.github}</a>
+                    <br>
+                    <p>Hold: ${person.hold}</p>
+                </div>`;
+                    }
+                });
+            }
+
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            });
+
+
+            function filtrering() {
+                filter = this.getAttribute("data-hold");
+                document.querySelector("h1").textContent = this.textContent;
+                document.querySelectorAll(".filter").forEach(elm => {
+                    elm.classList.remove("valgt");
+                    console.log("Fjerner valgt");
+                });
+                this.classList.add("valgt");
+                showPersons();
+            }
+
+            getJson();
+        }
+    </script>
+</body>
+</html>
