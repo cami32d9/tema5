@@ -102,6 +102,7 @@
 
             function filtrering() {
                 filter = this.getAttribute("data-hold");
+                document.querySelector("h1").textContent = this.textContent;
                 showPersons();
             }
 

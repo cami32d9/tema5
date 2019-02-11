@@ -70,7 +70,7 @@
                 emptyDiv.innerHTML = "";
                 console.log("visDyr");
                 persons.forEach(person => {
-                    if (filter == "alle" || person.hold == filter) {
+                    if (person.hold === filter) {
                         console.log("no 1" + filter);
                         emptyDiv.innerHTML +=
                             `<div class="person_box">
