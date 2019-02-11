@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Objekter</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+        img {
+            width: 200px;
+            height: auto;
+        }
+        #empty {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .person_box {
+            border: 1px solid lightgrey;
+            padding: 10px;
+        }
+
+        .menu {
+            text-align: center;
+        }
+
+        .filter {
+            margin: 15px 2px;
+            padding: 5px;
+        }
+
+        .valgt {
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+    <button class="filter" data-hold="alle">Alle</button>
+    <button class="filter" data-hold="a">Hold A</button>
+    <button class="filter valgt" data-hold="b">Hold B</button>
+    </div>
+
+    <div id="empty"></div>
+
+    <script>
+
+        let persons = [];
+        let filter = "b";
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+            console.log("start");
+
+            let emptyDiv = document.querySelector("#empty");
+
+            async function getJson() {
+                console.log("getJson");
+                let jsonData = await fetch("personer.json");
+                persons = await jsonData.json();
+                showPersons();
+            }
+
+            function showPersons() {
+                console.log("visDyr");
+                persons.forEach(person => {
+                    if (person.hold === filter) {
+                    emptyDiv.innerHTML +=
+                        `<div class="person_box">
+                    <h2>${person.navn}</h2>
+                    <img src="${person.billede}" alt="personbillede">
+                    <br> <br>
+                    <a href="https://github.com/${person.github}" target="_blank">Github-konto: ${person.github}</a>
+                    <br>
+                    <p>Hold: ${person.hold}</p>
+                </div>`;
+                }
+                });
+            }
+
+            getJson();
+        }
+    </script>
+</body>
+</html>
