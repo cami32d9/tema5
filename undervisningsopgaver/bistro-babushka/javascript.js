@@ -6,28 +6,44 @@ function start() {
     console.log("start");
 
     let menu = document.querySelector("#menu");
-    document.querySelector("#show_all").addEventListener("click", function() {
+    document.querySelector("#show_all").addEventListener("click", function () {
         document.querySelectorAll("button").forEach(button => {
             button.classList.remove("button_chosen");
             this.classList.add("button_chosen");
         });
         showMenu();
     });
-    document.querySelector("#starters").addEventListener("click", function() {
+
+    // let filterButtons = document.querySelectorAll(".filter_button");
+    //
+    // filterButtons.forEach(button => {
+    //     button.addEventListener("click", function () {
+    //         let category = this.getAttribute("data-type");
+    //             dishesByCategory("forretter");
+    //             document.querySelectorAll("button").forEach(button => {
+    //                 button.classList.remove("button_chosen");
+    //                 this.classList.add("button_chosen");
+    //             })
+    //         }
+    //     )
+    // });
+
+
+    document.querySelector("#starters").addEventListener("click", function () {
         dishesByCategory("forretter");
         document.querySelectorAll("button").forEach(button => {
             button.classList.remove("button_chosen");
             this.classList.add("button_chosen");
         })
     });
-    document.querySelector("#main_course").addEventListener("click", function() {
+    document.querySelector("#main_course").addEventListener("click", function () {
         dishesByCategory("hovedretter");
         document.querySelectorAll("button").forEach(button => {
             button.classList.remove("button_chosen");
             this.classList.add("button_chosen");
         })
     });
-    document.querySelector("#desserts").addEventListener("click", function() {
+    document.querySelector("#desserts").addEventListener("click", function () {
         dishesByCategory("desserter");
         document.querySelectorAll("button").forEach(button => {
             button.classList.remove("button_chosen");
