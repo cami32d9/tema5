@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Objekter</title>
+    <style>
+        html {
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+        }
+
+        #empty {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .person_box {
+            border: 1px solid lightgrey;
+            padding: 10px;
+        }
+
+        .menu {
+            text-align: center;
+        }
+
+        .filter {
+            margin: 15px 2px;
+            padding: 5px;
+        }
+
+        .valgt {
+            background-color: cornflowerblue;
+        }
+
+        .filter_title {
+            text-align: center;
+        }
+
+        .popup {
+            width: 100vw;
+            height: 100vh;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup">
+        <div class="luk">
+            <button>X</button>
+        </div>
+        <div class="indhold">
+            Indhold her
+        </div>
+    </div>
+    <header>
+        <div class="filter_title">
+            <h1>Alle</h1>
+        </div>
+        <nav class="menu">
+            <button class="filter valgt" data-hold="alle">Alle</button>
+            <button class="filter" data-hold="a">Hold A</button>
+            <button class="filter" data-hold="b">Hold B</button>
+        </nav>
+    </header>
+
+    <main>
+        <div id="empty"></div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+
+        let urlParams = new URLSearchParams(window.location.search);
+        let github = urlParams.get("github");
+
+        let persons = [];
+        let person;
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        document.querySelector(".luk").addEventListener("click", () => {
+            location.href="05-kald.html"
+        });
+
+
+        function start() {
+            console.log("start");
+
+            let emptyDiv = document.querySelector("#empty");
+
+            async function getJson() {
+                console.log("getJson");
+                let jsonData = await fetch("personer.json");
+                persons = await jsonData.json();
+                persons.forEach(obj => {
+                    if (obj.github == github) {
+                        person = obj;
+                    }
+                })
+
+                åbn();
+            }
+
+            function åbn() {
+                document.querySelector(".indhold").innerHTML =
+                    `<div class="person_box">
+                                <h2>${person.navn}</h2>
+                                <img src="${person.billede}" alt="personbillede">
+                                <p>Alder: ${person.alder}</p>
+                            </div>`;
+                document.querySelector(".popup").style.display="block";
+
+            }
+
+            getJson();
+        }
+    </script>
+</body>
+</html>

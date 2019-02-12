@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Objekter</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+        }
+
+        #empty {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .person_box {
+            border: 1px solid lightgrey;
+            padding: 10px;
+        }
+
+        .menu {
+            text-align: center;
+        }
+
+        .filter {
+            margin: 15px 2px;
+            padding: 5px;
+        }
+
+        .valgt {
+            background-color: cornflowerblue;
+        }
+
+        .filter_title {
+            text-align: center;
+        }
+
+        .popup {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background-color: red;
+            display: none;
+        }
+
+        .indhold {
+            box-sizing: border-box;
+            background-color: lightgrey;
+            width: 90vw;
+            height: 90vh;
+            margin: auto;
+        }
+
+        .luk {
+            box-sizing: border-box;
+            text-align: right;
+            padding-right: 1em;
+        }
+
+        .luk button {
+            font-size: 2em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup">
+        <div class="luk">
+            <button>X</button>
+        </div>
+        <div class="indhold">
+            Indhold her
+        </div>
+    </div>
+    <header>
+        <div class="filter_title">
+            <h1>Alle</h1>
+        </div>
+        <nav class="menu">
+            <button class="filter valgt" data-hold="alle">Alle</button>
+            <button class="filter" data-hold="a">Hold A</button>
+            <button class="filter" data-hold="b">Hold B</button>
+        </nav>
+    </header>
+
+    <main>
+        <div id="empty"></div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+
+        let persons = [];
+        let filter = "alle";
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+            console.log("start");
+
+            let emptyDiv = document.querySelector("#empty");
+
+            async function getJson() {
+                console.log("getJson");
+                let jsonData = await fetch("personer.json");
+                persons = await jsonData.json();
+                persons.sort((a, b) => {
+                    return b.navn.localeCompare(a.navn);
+                });
+                showPersons();
+            }
+
+            function showPersons() {
+                emptyDiv.innerHTML = "";
+                persons.forEach(person => {
+                    if (filter == "alle" || person.hold == filter) {
+                        let template =
+                            `<div class="person_box">
+                                <h2>${person.navn}</h2>
+                                <img src="${person.billede}" alt="personbillede">
+                                <p>Alder: ${person.alder}</p>
+                            </div>`;
+                        emptyDiv.insertAdjacentHTML("beforeend", template);
+                        emptyDiv.lastElementChild.addEventListener("click", () => {
+                            location.href="07-singleView.html?github="+person.github;
+                        });
+                    }
+                });
+            }
+
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            });
+
+
+            function filtrering() {
+                filter = this.getAttribute("data-hold");
+                document.querySelector("h1").textContent = this.textContent;
+                document.querySelectorAll(".filter").forEach(elm => {
+                    elm.classList.remove("valgt");
+                    console.log("Fjerner valgt");
+                });
+                this.classList.add("valgt");
+                showPersons();
+            }
+
+            getJson();
+        }
+    </script>
+</body>
+</html>

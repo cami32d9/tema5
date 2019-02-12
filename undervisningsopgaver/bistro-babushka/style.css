@@ -21,6 +21,16 @@ header {
     background-color: cornflowerblue;
 }
 
+.headline {
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 20px;
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -30,7 +40,7 @@ main {
 #menu {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 30px;
+    grid-gap: 10px;
 }
 
 /*----- Navigation -----*/
@@ -49,7 +59,31 @@ button {
     background-color: darkseagreen;
 }
 
-/*----- Dishes -----*/
+/*----- Footer -----*/
+
+footer {
+    background-color: darkseagreen;
+    width: 100%;
+}
+
+.footer-content {
+    color: ghostwhite;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    display: flex;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer p:first-child {
+    margin-right: 30px;
+}
+
+/*----- Main -----*/
 
 .dish_container {
     background-color: lightsteelblue;
