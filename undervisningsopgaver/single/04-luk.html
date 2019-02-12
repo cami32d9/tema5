@@ -138,12 +138,7 @@
                         emptyDiv.insertAdjacentHTML("beforeend", template);
                         emptyDiv.lastElementChild.addEventListener("click", åbn);
                         function åbn() {
-                            document.querySelector(".indhold").innerHTML =
-                        `<div class="person_box">
-                                <h2>${person.navn}</h2>
-                                <img src="${person.billede}" alt="personbillede">
-                                <p>Alder: ${person.alder}</p>
-                            </div>`;
+                            document.querySelector(".indhold").innerHTML = template;
                             document.querySelector(".popup").style.display="block";
 
                         }
