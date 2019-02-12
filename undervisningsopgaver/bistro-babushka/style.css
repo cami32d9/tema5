@@ -29,19 +29,24 @@ main {
 
 #menu {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
 }
 
 /*----- Navigation -----*/
 
 nav {
-    margin: 20px 35px;
+    margin: 20px 0;
+    text-align: center;
 }
 
 button {
     padding: 5px;
     font-size: 1.2rem;
+}
 
+.button_chosen {
+    background-color: darkseagreen;
 }
 
 /*----- Dishes -----*/

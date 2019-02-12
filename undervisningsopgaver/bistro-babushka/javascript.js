@@ -6,15 +6,33 @@ function start() {
     console.log("start");
 
     let menu = document.querySelector("#menu");
-    document.querySelector("#show_all").addEventListener("click", showMenu);
+    document.querySelector("#show_all").addEventListener("click", function() {
+        document.querySelectorAll("button").forEach(button => {
+            button.classList.remove("button_chosen");
+            this.classList.add("button_chosen");
+        });
+        showMenu();
+    });
     document.querySelector("#starters").addEventListener("click", function() {
         dishesByCategory("forretter");
+        document.querySelectorAll("button").forEach(button => {
+            button.classList.remove("button_chosen");
+            this.classList.add("button_chosen");
+        })
     });
     document.querySelector("#main_course").addEventListener("click", function() {
         dishesByCategory("hovedretter");
+        document.querySelectorAll("button").forEach(button => {
+            button.classList.remove("button_chosen");
+            this.classList.add("button_chosen");
+        })
     });
     document.querySelector("#desserts").addEventListener("click", function() {
         dishesByCategory("desserter");
+        document.querySelectorAll("button").forEach(button => {
+            button.classList.remove("button_chosen");
+            this.classList.add("button_chosen");
+        })
     });
 
     async function getJson() {
@@ -25,6 +43,7 @@ function start() {
     }
 
     function showMenu() {
+        menu.innerHTML = "";
         console.log("showMenu");
         dishes.forEach(dish => {
             menu.innerHTML +=
