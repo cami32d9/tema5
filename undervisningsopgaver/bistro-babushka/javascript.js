@@ -14,41 +14,18 @@ function start() {
         showMenu();
     });
 
-    // let filterButtons = document.querySelectorAll(".filter_button");
-    //
-    // filterButtons.forEach(button => {
-    //     button.addEventListener("click", function () {
-    //         let category = this.getAttribute("data-type");
-    //             dishesByCategory("forretter");
-    //             document.querySelectorAll("button").forEach(button => {
-    //                 button.classList.remove("button_chosen");
-    //                 this.classList.add("button_chosen");
-    //             })
-    //         }
-    //     )
-    // });
+    let filterButtons = document.querySelectorAll(".filter_button");
 
-
-    document.querySelector("#starters").addEventListener("click", function () {
-        dishesByCategory("forretter");
-        document.querySelectorAll("button").forEach(button => {
-            button.classList.remove("button_chosen");
-            this.classList.add("button_chosen");
-        })
-    });
-    document.querySelector("#main_course").addEventListener("click", function () {
-        dishesByCategory("hovedretter");
-        document.querySelectorAll("button").forEach(button => {
-            button.classList.remove("button_chosen");
-            this.classList.add("button_chosen");
-        })
-    });
-    document.querySelector("#desserts").addEventListener("click", function () {
-        dishesByCategory("desserter");
-        document.querySelectorAll("button").forEach(button => {
-            button.classList.remove("button_chosen");
-            this.classList.add("button_chosen");
-        })
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            let category = this.getAttribute("data-type");
+                dishesByCategory(category);
+                document.querySelectorAll("button").forEach(button => {
+                    button.classList.remove("button_chosen");
+                    this.classList.add("button_chosen");
+                })
+            }
+        )
     });
 
     async function getJson() {
@@ -89,7 +66,7 @@ function dishesByCategory(category) {
                     <h2>${dish.navn}</h2>
                     <div class="origin">${dish.oprindelse}</div>
                     <p>${dish.kort}</p>
-                    <div class="price">Pris: ${dish.pris}</div>
+                    <div class="price">Pris: ${dish.pris},-</div>
                 </div>
                 </div>`;
     });
