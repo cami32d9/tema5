@@ -1,0 +1,218 @@
+/*----- General -----*/
+
+@font-face {
+    font-family: 'Eras Light ITC';
+    src: url('fonts/ErasITC-Light.eot');
+    src: url('fonts/ErasITC-Light.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ErasITC-Light.woff2') format('woff2'),
+    url('fonts/ErasITC-Light.woff') format('woff'),
+    url('fonts/ErasITC-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eras Medium ITC';
+    src: url('fonts/ErasITC-Medium.eot');
+    src: url('fonts/ErasITC-Medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ErasITC-Medium.woff2') format('woff2'),
+    url('fonts/ErasITC-Medium.woff') format('woff'),
+    url('fonts/ErasITC-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eras Demi ITC';
+    src: url('fonts/ErasITC-Demi.eot');
+    src: url('fonts/ErasITC-Demi.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ErasITC-Demi.woff2') format('woff2'),
+    url('fonts/ErasITC-Demi.woff') format('woff'),
+    url('fonts/ErasITC-Demi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eras Bold ITC';
+    src: url('fonts/ErasITC-Bold.eot');
+    src: url('fonts/ErasITC-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ErasITC-Bold.woff2') format('woff2'),
+    url('fonts/ErasITC-Bold.woff') format('woff'),
+    url('fonts/ErasITC-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --header-color: #952124;
+    --light-color-100: #FFF9EF;
+    --light-color-200: #D5C1A8;
+    --dark-color-100: #3E3030;
+}
+
+body {
+    margin: 0;
+    background-image: url("elements/background_placeholder.jpg");
+    background-size: contain;
+    font-family: "Eras Medium ITC", sans-serif;
+    font-size: 13pt;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1 {
+    color: var(--light-color-100);
+    font-weight: normal;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color:inherit;
+}
+
+b {
+    font-family: "Eras Bold ITC";
+}
+
+.demi {
+    font-family: "Eras Demi ITC", sans-serif;
+}
+
+/*----- Header -----*/
+
+header {
+    width: 100%;
+    height: 150px;
+    background-color: var(--header-color);
+    color: var(--light-color-100);
+}
+
+header img {
+    width: 270px;
+    position: relative;
+    top: 40px;
+    left: 100px;
+}
+
+.header_content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+nav {
+    display: inline-block;
+    position: relative;
+    left: 550px;
+    font-size: 1.2rem;
+    font-family: "Eras Light ITC", sans-serif;
+}
+
+.nav_item {
+    padding: 5px 50px;
+    border: 1px solid #D8A7A7;
+    background-color: var(--header-color);
+}
+
+/*----- Footer -----*/
+
+footer {
+    width: 100%;
+    background-color: var(--header-color);
+    color: var(--light-color-100);
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.link {
+    cursor: pointer;
+}
+
+/*----- Main -----*/
+
+main {
+    max-width: 1200px;
+    margin: 70px auto;
+    color: var(--dark-color-100);
+}
+
+/*----- Cards -----*/
+
+.large_item {
+    display: flex;
+    margin: 40px 0;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.large_image {
+    width: 600px;
+}
+
+.large_card {
+    width: 540px;
+    background-color: var(--light-color-200);
+    margin: 15px 0;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Eras Medium ITC";
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*----- Shadows -----*/
+
+.shadow {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+}
+
+/*----- Front page -----*/
+
+.splash {
+    height: calc(100vh - 200px);
+}
+
+.splash img {
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.large_text {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 320px;
+}
+
+/*----- Menu -----*/
+
+
+/*----- Single view -----*/
+
+
+/*----- Info -----*/
+
