@@ -91,7 +91,7 @@ a:hover {
 }
 
 b {
-    font-family: "Eras Bold ITC";
+    font-family: "Eras Bold ITC", sans-serif;
 }
 
 .demi {
@@ -122,8 +122,8 @@ header img {
 
 nav {
     display: inline-block;
-    position: relative;
-    left: 550px;
+    position: absolute;
+    right: 50px;
     font-size: 1.2rem;
     font-family: "Eras Light ITC", sans-serif;
 }
@@ -145,7 +145,7 @@ footer {
 .footer_content {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -173,43 +173,51 @@ main {
 }
 
 .large_image {
-    width: 600px;
+    width: 50%;
 }
 
 .large_card {
-    width: 540px;
-    background-color: var(--light-color-200);
+    display: inline-block;
+    width: 50%;
+    height: inherit;
     margin: 15px 0;
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-family: "Eras Medium ITC";
+    background-color: var(--light-color-200);
+}
+
+.large_card_content {
     font-weight: normal;
     font-style: normal;
+    margin: 15px;
 }
 
 
-/*----- Shadows -----*/
+/*----- Helpers -----*/
 
 .shadow {
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.vertical_align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*----- Front page -----*/
 
 .splash {
-    height: calc(100vh - 200px);
+    max-height: calc(100vh - 200px);
 }
 
 .splash img {
-    max-height: 100%;
+    max-height: calc(100vh - 200px);
     object-fit: cover;
 }
 
 .large_text {
     font-size: 3rem;
     text-align: center;
-    line-height: 320px;
+    line-height: 100%;
 }
 
 /*----- Menu -----*/
