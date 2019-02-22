@@ -38,14 +38,24 @@ function start() {
 
     function open() {
         document.querySelector("h1").textContent = `${dish.title}`;
-        document.querySelector(".content_page").innerHTML =
-            `<h2>${dish.longtitle}</h2><img src="elements/dishes/${dish.image}.jpg">
+        document.querySelector("#singleview").innerHTML =
+            `<div class="large_item reverse">
+<div class="large_card">
+                    <div class="dish_info__short">
+                    <h3>${dish.longtitle}</h3>
                     <p>${dish.longtext}</p>
-                    <div class="price">Price: ${dish.price},-</div>`;
+                    <div class="price">Price: ${dish.price},-</div>
+                    </div>
+                    </div>
+                    
+<div class="large_image">
+                    <img src="elements/dishes/${dish.image}.jpg" class="shadow">
+                    </div>
+                    
+                    </div>`;
         document.querySelector("title").textContent = `${dish.title} - Lejos de Mexico`;
     }
 
     getJson();
 
 }
-
