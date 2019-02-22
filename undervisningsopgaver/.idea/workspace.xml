@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cecdacfb-ca92-4890-b1b5-52fc7d90aa54" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/dishes.json" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/dishes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/javascript_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/javascript_page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/menu_singleview.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/menu_singleview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/babushka/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babushka/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/babushka/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babushka/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/babushka/images/icons/Artboard 4.svg" beforeDir="false" />
@@ -287,6 +288,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26545843" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
