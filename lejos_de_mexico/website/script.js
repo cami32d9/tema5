@@ -13,7 +13,6 @@ function start() {
                 document.querySelectorAll("button").forEach(button => {
                     button.classList.remove("button_chosen");
                     this.classList.add("button_chosen");
-                    document.querySelector("h1").textContent = this.textContent;
                 })
             }
         )
@@ -36,20 +35,22 @@ function dishesByCategory(category) {
         filtered = dishes;
     }
     else {
-        filtered = dishes.filter(dish => dish.kategori === category);
+        filtered = dishes.filter(dish => dish.category === category);
     }
 
     filtered.forEach(dish => {
         let template =
             `<div class="dish_container">
-                    <img src="images/small/${dish.billede}-sm.jpg">
-                    <h2>${dish.navn}</h2>
-                    <p>${dish.kort}</p>
-                    <div class="price">Pris: ${dish.pris},-</div>
+                    <img src="elements/dishes/${dish.image}.jpg" class="shadow">
+                    <div class="dish_info__short">
+                    <h3>${dish.title}</h3>
+                    <p>${dish.shorttext}</p>
+                    <div class="price">Price: ${dish.price},-</div>
+                    </div>
                 </div>`;
         menu.insertAdjacentHTML("beforeend", template);
         menu.lastElementChild.addEventListener("click", () => {
-            location.href="babushka_singleview_page.html?dishID="+dish.billede;
+            location.href = "menu_singleview.html?dishID=" + dish.image;
         });
 
     });

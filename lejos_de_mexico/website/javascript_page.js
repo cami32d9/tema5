@@ -28,7 +28,7 @@ function start() {
         let jsonData = await fetch("dishes.json");
         dishes = await jsonData.json();
         dishes.forEach(obj => {
-            if (obj.billede == dishID) {
+            if (obj.image == dishID) {
                 dish = obj;
             }
         });
@@ -37,20 +37,15 @@ function start() {
     }
 
     function open() {
+        document.querySelector("h1").textContent = `${dish.title}`;
         document.querySelector(".content_page").innerHTML =
-            `<img src="images/large/${dish.billede}.jpg">
-                    <h2>${dish.navn}</h2>
-                    <div class="origin">${dish.oprindelse}</div>
-                    <p>${dish.lang}</p>
-                    <div class="price">Pris: ${dish.pris},-</div>`;
-        document.querySelector("title").textContent = `${dish.navn} - Bistro Babushka`;
+            `<h2>${dish.longtitle}</h2><img src="elements/dishes/${dish.image}.jpg">
+                    <p>${dish.longtext}</p>
+                    <div class="price">Price: ${dish.price},-</div>`;
+        document.querySelector("title").textContent = `${dish.title} - Lejos de Mexico`;
     }
 
     getJson();
-
-    document.querySelector(".back").addEventListener("click", () => {
-        location.href="babushka_singleview_solution.html"
-    });
 
 }
 
