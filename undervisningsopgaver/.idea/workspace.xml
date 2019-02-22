@@ -2,10 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cecdacfb-ca92-4890-b1b5-52fc7d90aa54" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/bak/cheese-dip.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/bak/chicken-tortilla-soup.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/bak/chilaquiles.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/bak/chile-relleno.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/bak/churro-sundae.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/bak/enchiladas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/bak/flan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/bak/huevos-rancheros.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/bak/tostada.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/bak/tres-leche-cake.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/cheese-dip.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/cheese-dip.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/chilaquiles.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/chilaquiles.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/chile-relleno.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/chile-relleno.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/churro-sundae.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/churro-sundae.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/enchiladas.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/enchiladas.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/flan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/flan.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/huevos-rancheros.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/huevos-rancheros.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/tostada.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/tostada.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/tres-leche-cake.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/elements/dishes/tres-leche-cake.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/javascript_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/javascript_page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/menu_singleview.html" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/menu_singleview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lejos_de_mexico/website/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/../lejos_de_mexico/website/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/babushka/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babushka/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/babushka/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/babushka/.idea/workspace.xml" afterDir="false" />

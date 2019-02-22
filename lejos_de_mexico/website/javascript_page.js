@@ -39,8 +39,8 @@ function start() {
     function open() {
         document.querySelector("h1").textContent = `${dish.title}`;
         document.querySelector("#singleview").innerHTML =
-            `<div class="large_item reverse">
-<div class="large_card">
+            `<div class="large_item reverse tablet_wrap">
+<div class="large_card tablet_wrap">
                     <div class="dish_info__short">
                     <h3>${dish.longtitle}</h3>
                     <p>${dish.longtext}</p>
@@ -51,7 +51,9 @@ function start() {
 <div class="large_image">
                     <img src="elements/dishes/${dish.image}.jpg" class="shadow">
                     </div>
-                    
+                    </div>
+                    <div class="source">
+                    Image source: <u>${dish.imgsource}</u>
                     </div>`;
         document.querySelector("title").textContent = `${dish.title} - Lejos de Mexico`;
     }
