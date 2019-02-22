@@ -1,0 +1,272 @@
+[
+  {
+    "id": 10,
+    "kategori": "forretter",
+    "navn": "Russisk ringbr\u00f8d",
+    "pris": 29,
+    "kort": "Russisk ringbr\u00f8d af Karapatisk mel",
+    "lang": "Russisk ringbr\u00f8d efter en klassisk opskrift fra Karapatien. Dejen blandes koldh\u00e6ver 30 dage, inde br\u00f8det bages over b\u00e5l. Meget spr\u00f8dt, godt med Karapatisk bjerggedsm\u00f8r.",
+    "oprindelse": "Karapatien",
+    "billede": "ringbroed-druer"
+  },
+  {
+    "id": 12,
+    "kategori": "forretter",
+    "navn": "Cabanossi med r\u00f8dbedecreme",
+    "pris": 49,
+    "kort": "Cabanossi med r\u00f8dbedecreme og l\u00f8g",
+    "lang": "Cabanossi med r\u00f8dbedecreme og creme er egentlig en forret, men kammerat Vladimir elskede denne ret s\u00e5 h\u00f8jt, at han forb\u00f8d restauranter i Krigien at s\u00e6lge det som andet end en hovedret. Vi anbefaler det dog som forret, inden en god Bortsjs. Skylles helst ned med vodka.",
+    "oprindelse": "Krigien",
+    "billede": "rodbede-cabanossi"
+  },
+  {
+    "id": 14,
+    "kategori": "forretter",
+    "navn": "Caviar bruschetta",
+    "pris": 49,
+    "kort": "Brushcetta med russisk Caviar",
+    "lang": "Til denne dejlige Bruschetta anvender vi kun de dejligste sibiriske Caviar. Caviarerne presses ud af fiskene mens de stadig er levende, og v\u00e6des derefter i Putinka Vodka. Der er masser af bjerggedesm\u00f8r p\u00e5 bruschettaene.",
+    "oprindelse": "Sibirien",
+    "billede": "caviarbruschetta"
+  },
+  {
+    "id": 17,
+    "kategori": "forretter",
+    "navn": "Baltisk bondesuppe",
+    "pris": 79,
+    "kort": "Baltisk bondesuppe - en solid starter",
+    "lang": "Baltisk bondesuppe er en solid starter. Godt til dig, der skal drikke godt igennem under m\u00e5ltidet. Suppen best\u00e5r af ged, gr\u00f8nt og masser af l\u00f8g.",
+    "oprindelse": "Baltikum",
+    "billede": "baltiskbondesuppe"
+  },
+  {
+    "id": 19,
+    "kategori": "forretter",
+    "navn": "\u00d8stsibirisk k\u00e5lsuppe",
+    "pris": 69,
+    "kort": "K\u00e5lsuppe med 7 k\u00e5lvarianter",
+    "lang": "Denne l\u00e6kre suppe best\u00e5r af 7 forskellige slags k\u00e5l: Hvidk\u00e5l, gr\u00f8nk\u00e5l, brunk\u00e5l, spidsk\u00e5l, kabanossik\u00e5l, sibirisk k\u00e5l og k\u00e5lrabi. Dertil en masse Voda (vand) og krydderier fra \u00d8stsibirien.",
+    "oprindelse": "\u00d8stsibirien",
+    "billede": "kaalsuppe"
+  },
+  {
+    "id": 2,
+    "kategori": "hovedretter",
+    "navn": "Bulgarsk bondesuppe",
+    "pris": 99,
+    "kort": "Cauceskus bulgarske bondesuppe",
+    "lang": "Da Caucesku var i f\u00e6rd med at skrive sit navn med h\u00f8jhuse, var han n\u00f8dt til at give h\u00e5ndv\u00e6rkerne solid kost, s\u00e5 de kunne arbejde 18 timer i d\u00f8gnet, 7 dage om ugen: Bulgarsk bondesuppe. Suppen best\u00e5r af alt det bedste fra Bulgarien.",
+    "oprindelse": "Bulgarien",
+    "billede": "bulgarskbondesuppe"
+  },
+  {
+    "id": 21,
+    "kategori": "hovedretter",
+    "navn": "K\u00e6mperogn med kartoffelmos",
+    "pris": 89,
+    "kort": "K\u00e6mpe klipfiskerogn med Kartofler og fiskefond",
+    "lang": "K\u00e6mpe klipfiskene i det nordlige Novogorod har l\u00e6nge v\u00e6ret kendt for at levere de bedste rogn. Her sereveres de med eis-kartofler og en l\u00e6kker sovs baseret p\u00e5 fiskefond.",
+    "oprindelse": "Novogorod",
+    "billede": "mos-rogn"
+  },
+  {
+    "id": 25,
+    "kategori": "hovedretter",
+    "navn": "Diplomat-b\u00f8f med gr\u00f8nt",
+    "pris": 179,
+    "kort": "Diplomat-b\u00f8f med gr\u00f8nt",
+    "lang": "Diplomatiet har haft mange udfordringer i USSR. Derfor blev der s\u00f8rget godt for dem, og som nogen af de f\u00e5, fik diplomaterne mange b\u00f8ffer under den kolde krig. Diplomat-b\u00f8ffen med grillede gr\u00f8ntsager og koldpresset olie er af ypperste kvalitet - k\u00f8det kommer fra udsultede ungkalve i Viktoriagrad.",
+    "oprindelse": "Viktoriagrad",
+    "billede": "boef"
+  },
+  {
+    "id": 34,
+    "kategori": "hovedretter",
+    "navn": "Zygroffs bondeplatte",
+    "pris": 109,
+    "kort": "Zygroffs bondeplatte - b\u00f8ndernes svar p\u00e5 Tapas",
+    "lang": "Under de trange vilk\u00e5r p\u00e5 landet Sibirien, b\u00f8d husm\u00e6ndene p\u00e5 Zygroffs bondeplatte, n\u00e5r der var fest. Gode, grove gr\u00f8ntsager, t\u00f8rret b\u00f8ffelkod og masser af \u00e6g. Specielt for bondeplatten blev de dejlige caviar skiftet ud med billige kapers.",
+    "oprindelse": "Sibirien",
+    "billede": "bondeplatte"
+  },
+  {
+    "id": 36,
+    "kategori": "hovedretter",
+    "navn": "Russisk Tapas",
+    "pris": 199,
+    "kort": "Russisk tapas med tomater og k\u00f8d",
+    "lang": "Der er blevet sagt meget om det russiske k\u00f8kken, men godt har sj\u00e6ldent v\u00e6ret et af till\u00e6gsordene. Russisk tapas er dog l\u00e6kkert. Inspireret af duften af Italien f\u00e5r du her t\u00f8rret b\u00f8ffelk\u00f8d, hvidt br\u00f8d og tomater badet i koldpresset olie.",
+    "oprindelse": "Rusland",
+    "billede": "russisktapas"
+  },
+  {
+    "id": 38,
+    "kategori": "hovedretter",
+    "navn": "Moldavisk fiskesuppe",
+    "pris": 139,
+    "kort": "Den dejlige, alkoholholdige moldaviske fiskesuppe",
+    "lang": "Denne suppe fra Moldavien er unik ved at v\u00e6re forholdsvis st\u00e6rk. Suppen koges p\u00e5 basis af Zyganoff Vodka i 24 timer. Meget af alkoholen damper v\u00e6k, men der er typisk en rest p\u00e5 ca. 8% alkohol tilbage, s\u00e5 spiser du godt med suppe, skal du nok blive bims.",
+    "oprindelse": "Moldavien",
+    "billede": "moldaviskfiskesuppe"
+  },
+  {
+    "id": 41,
+    "kategori": "hovedretter",
+    "navn": "Dynryp",
+    "pris": 149,
+    "kort": "Dynrup - Russisk bulgur med skovsvampe",
+    "lang": "Dynrup - Russisk bulgur med skovsvampe fra det \u00f8stlige Kirgisistan. Svampene minder om kantarelle, men med en mere st\u00f8vet smag.",
+    "oprindelse": "Rusland",
+    "billede": "dynryp"
+  },
+  {
+    "id": 42,
+    "kategori": "desserter",
+    "navn": "Pandekager med kaviar",
+    "pris": 79,
+    "kort": "Br\u00e6ndte pandekager med Bordyriske \u00f8rne-kaviar",
+    "lang": "Br\u00e6ndte pandekager med Bordyriske \u00f8rne-kaviar. \u00d8rne laver kaviar p\u00e5 st\u00f8rrelse med peberkorn. Og de smager af kaviar. Ikke peber. L\u00e6kkert.",
+    "oprindelse": "Bordurien",
+    "billede": "kaviarpandekager"
+  },
+  {
+    "id": 43,
+    "kategori": "desserter",
+    "navn": "Guzni",
+    "pris": 69,
+    "kort": "Guzni - R\u00f8dbede\/n\u00f8ddeis",
+    "lang": "Guzni - den verdenskendte r\u00f8dbede\/n\u00f8ddeis fra Petrograd. Kammerat Boris Guzni var stor fan af den, og spiste den hver dag under Den kolde krig.",
+    "oprindelse": "Petrograd",
+    "billede": "guzni"
+  },
+  {
+    "id": 44,
+    "kategori": "desserter",
+    "navn": "Kirgisisk roulade",
+    "pris": 89,
+    "kort": "Kirgisisk roulade best\u00e5ende af n\u00f8dder og r\u00f8dk\u00e5l",
+    "lang": "I det nordlige Kirgisistan best\u00e5r en v\u00e6sentlig del af kostpyramiden af forskellige k\u00e5lvarianter og n\u00f8dder. Mama Dushku fandt p\u00e5 denne ret, som en hyldest til det r\u00f8de flag med hammer og segl.",
+    "oprindelse": "Kirgisistan",
+    "billede": "kirgisiskroulade"
+  },
+  {
+    "id": 45,
+    "kategori": "desserter",
+    "navn": "Pavlova i melon",
+    "pris": 49,
+    "kort": "Pavlova - russiske pandekager - i honningmelon fra Nordkorea",
+    "lang": "Pavlova - de ber\u00f8mte festlige russiske pandekager - serveres i l\u00e6kker honningmelon fra Nordkorea",
+    "oprindelse": "Nordkorea",
+    "billede": "pavlova"
+  },
+  {
+    "id": 52,
+    "kategori": "desserter",
+    "navn": "Groggiroshorn",
+    "pris": 39,
+    "kort": "Groggishorn - det russiske svar p\u00e5 p\u00f8lsehorn",
+    "lang": "Groggishorn - det russiske svar p\u00e5 p\u00f8lsehorn, bare meget mere rustikt og sp\u00e6ndende",
+    "oprindelse": "Rusland",
+    "billede": "groggiroshorn"
+  },
+  {
+    "id": 54,
+    "kategori": "desserter",
+    "navn": "S\u00f8de, syltede l\u00f8g",
+    "pris": 59,
+    "kort": "En l\u00e6kker potpourri af s\u00f8de, syltede l\u00f8g",
+    "lang": "Et l\u00e6kkert festfyrv\u00e6rkeri af festlige s\u00f8de, vodkasyltede l\u00f8g",
+    "oprindelse": "Moskva",
+    "billede": "syltedeloeg"
+  },
+  {
+    "id": 55,
+    "kategori": "drikkevarer",
+    "navn": "Bochkarev fad\u00f8l",
+    "pris": 55,
+    "kort": "En halv liter Bochkarev fad\u00f8l",
+    "lang": "En halv liter Bochkarev fad\u00f8l. Sk\u00e5ll!",
+    "oprindelse": "Skt Petersburg",
+    "billede": "bochkarev"
+  },
+  {
+    "id": 60,
+    "kategori": "drikkevarer",
+    "navn": "Voda-vodka",
+    "pris": 19,
+    "kort": "Voda-vodka - vodka i rigelige m\u00e6ngder",
+    "lang": "Voda-vodka - vodka i rigelige m\u00e6ngder, dugklar og god.",
+    "oprindelse": "Sibirien",
+    "billede": "voda"
+  },
+  {
+    "id": 62,
+    "kategori": "drikkevarer",
+    "navn": "Gloske (cola)",
+    "pris": 39,
+    "kort": "Gloske - russisk for Cola - fra bryggeriet Iznogoud",
+    "lang": "Gloske - russisk for Cola - fra bryggeriet Iznogoud. Brygget p\u00e5 roer og kartofler.",
+    "oprindelse": "Rusland",
+    "billede": "cola"
+  },
+  {
+    "id": 65,
+    "kategori": "drikkevarer",
+    "navn": "R\u00f8dvin, glas",
+    "pris": 49,
+    "kort": "Et glas god R\u00f8dvin fra det tidligere USSR",
+    "lang": "Huset Petrograd's r\u00f8dvin er produceret f\u00f8r 1990, og lagret i de dybe saltminer (normalt forbeholdt defekte atomv\u00e5ben) i Yekaterinburg. Det giver vinen en s\u00e6rdeles karakteristisk gl\u00f8d, der viser sig ved svag stearinlys-belysning.",
+    "oprindelse": "Yekaterinburg",
+    "billede": "roedvin"
+  },
+  {
+    "id": 76,
+    "kategori": "drikkevarer",
+    "navn": "Hvidvin, glas",
+    "pris": 39,
+    "kort": "Et glas russisk hvidvin fra Chernobyl",
+    "lang": "Vores hvidvin er brygget p\u00e5 de helt s\u00e6rlige druer der voksede frem i den uber\u00f8rte natur omkring Pripyat. Vinen fremstilles lokalt i omr\u00e5det, druerne trampes af tr\u00e6nede bj\u00f8rne, og filtreres gennem et system af stadigt mindre babushka-filtre inde i hinanden. Du f\u00e5r ikke en lignende vin noget andet sted!",
+    "oprindelse": "Pripyat",
+    "billede": "hvidvin"
+  },
+  {
+    "id": 77,
+    "kategori": "sideorders",
+    "navn": "Russisk ringbr\u00f8d",
+    "pris": 29,
+    "kort": "Russisk ringbr\u00f8d bagt med det fineste gryzni-mel fra Gryzkigistan",
+    "lang": "Russisk ringbr\u00f8d bagt med det fineste gryzni-mel fra Gryzkigistan. Den helt rigtige snack til vodkaen.",
+    "oprindelse": "Gryzkigistan",
+    "billede": "ringbroed"
+  },
+  {
+    "id": 78,
+    "kategori": "sideorders",
+    "navn": "Murmanske bondeboller",
+    "pris": 19,
+    "kort": "Murmanske bondeboller bagt i stenovn",
+    "lang": "Murmanske bondeboller bagt i stenovn",
+    "oprindelse": "Murmansk",
+    "billede": "bondeboller"
+  },
+  {
+    "id": 79,
+    "kategori": "sideorders",
+    "navn": "Russisk salat",
+    "pris": 49,
+    "kort": "Russisk salat med \u00e6rter, b\u00f8nner, guler\u00f8dder og mayonnaise fra Volgograd",
+    "lang": "Russisk salat med \u00e6rter, b\u00f8nner, guler\u00f8dder og mayonnaise fra Volgograd",
+    "oprindelse": "Volgograd",
+    "billede": "russisksalat"
+  },
+  {
+    "id": 80,
+    "kategori": "sideorders",
+    "navn": "Kogte kartofler",
+    "pris": 29,
+    "kort": "Kogte kartofler med Murmanske krydderurter",
+    "lang": "Kogte kartofler, dyrket i Murmansk og med sp\u00e6ndende murmanske krydderurter indsamlet i Murmansk af murmanskanere",
+    "oprindelse": "Murmansk",
+    "billede": "kartofler"
+  }
+]

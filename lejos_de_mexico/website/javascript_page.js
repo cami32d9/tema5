@@ -1,9 +1,13 @@
 document.addEventListener("DOMContentLoaded", start);
 
 let dishes = [];
-let filtered = "";
+let dish;
 const filterButtons = document.querySelectorAll(".filter_button");
 const menu = document.querySelector("#menu");
+
+
+let urlParams = new URLSearchParams(window.location.search);
+let dishID = urlParams.get("dishID");
 
 function start() {
     filterButtons.forEach(button => {
@@ -23,34 +27,30 @@ function start() {
         console.log("getJson");
         let jsonData = await fetch("dishes.json");
         dishes = await jsonData.json();
-        dishesByCategory("all");
+        dishes.forEach(obj => {
+            if (obj.billede == dishID) {
+                dish = obj;
+            }
+        });
+
+        open();
+    }
+
+    function open() {
+        document.querySelector(".content_page").innerHTML =
+            `<img src="images/large/${dish.billede}.jpg">
+                    <h2>${dish.navn}</h2>
+                    <div class="origin">${dish.oprindelse}</div>
+                    <p>${dish.lang}</p>
+                    <div class="price">Pris: ${dish.pris},-</div>`;
+        document.querySelector("title").textContent = `${dish.navn} - Bistro Babushka`;
     }
 
     getJson();
-}
 
-function dishesByCategory(category) {
-    menu.innerHTML = "";
-
-    if (category == "all") {
-        filtered = dishes;
-    }
-    else {
-        filtered = dishes.filter(dish => dish.kategori === category);
-    }
-
-    filtered.forEach(dish => {
-        let template =
-            `<div class="dish_container">
-                    <img src="images/small/${dish.billede}-sm.jpg">
-                    <h2>${dish.navn}</h2>
-                    <p>${dish.kort}</p>
-                    <div class="price">Pris: ${dish.pris},-</div>
-                </div>`;
-        menu.insertAdjacentHTML("beforeend", template);
-        menu.lastElementChild.addEventListener("click", () => {
-            location.href="babushka_singleview_page.html?dishID="+dish.billede;
-        });
-
+    document.querySelector(".back").addEventListener("click", () => {
+        location.href="babushka_singleview_solution.html"
     });
+
 }
+

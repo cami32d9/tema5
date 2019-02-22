@@ -53,7 +53,7 @@
 
 body {
     margin: 0;
-    background-image: url("elements/background_placeholder.jpg");
+    background-image: url("elements/background_image.jpg");
     background-size: contain;
     font-family: "Eras Medium ITC", sans-serif;
     font-size: 13pt;
@@ -84,6 +84,10 @@ a {
     display: inline-block;
     text-decoration: none;
     color:inherit;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 b {
@@ -216,3 +220,50 @@ main {
 
 /*----- Info -----*/
 
+
+
+
+/*--------------------*/
+
+#menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 0px;
+    margin: 40px -3px;
+}
+
+.dish_container {
+    background-color: var(--light-color-200);
+    margin: 5px;
+}
+
+.origin {
+    font-style: italic;
+    margin-left: 5px;
+}
+
+p {
+    margin-left: 5px;
+}
+
+.price {
+    font-weight: bold;
+    margin: 5px;
+}
+
+.content_page_container {
+    max-width: 1200px;
+    background-color: lightsteelblue;
+}
+
+.content_page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.popup_info {
+    padding: 40px 30px 30px 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
