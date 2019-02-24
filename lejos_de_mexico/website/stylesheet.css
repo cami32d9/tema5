@@ -1,5 +1,33 @@
 /*----- General -----*/
 
+:root {
+    --header-color: #952124;
+    --light-color-100: #FFF9EF;
+    --light-color-200: #D5C1A8;
+    --dark-color-100: #3E3030;
+}
+
+body {
+    margin: 0;
+    background-image: url("elements/background_image.jpg");
+    background-size: contain;
+    font-family: "Eras Medium ITC", sans-serif;
+    font-size: 13pt;
+    overflow-y: scroll;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.source {
+    margin-top: 20px;
+}
+
+
+/*----- Text styling -----*/
+
 @font-face {
     font-family: 'Eras Light ITC';
     src: url('fonts/ErasITC-Light.eot');
@@ -42,27 +70,6 @@
     url('fonts/ErasITC-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
-}
-
-:root {
-    --header-color: #952124;
-    --light-color-100: #FFF9EF;
-    --light-color-200: #D5C1A8;
-    --dark-color-100: #3E3030;
-}
-
-body {
-    margin: 0;
-    background-image: url("elements/background_image.jpg");
-    background-size: contain;
-    font-family: "Eras Medium ITC", sans-serif;
-    font-size: 13pt;
-    overflow-y: scroll;
-}
-
-img {
-    width: 100%;
-    display: block;
 }
 
 h1 {
@@ -112,6 +119,7 @@ b {
     font-family: "Eras Demi ITC", sans-serif;
 }
 
+
 /*----- Header -----*/
 
 header {
@@ -148,6 +156,7 @@ nav {
     background-color: var(--header-color);
 }
 
+
 /*----- Footer -----*/
 
 footer {
@@ -167,6 +176,7 @@ footer {
     cursor: pointer;
 }
 
+
 /*----- Main -----*/
 
 main {
@@ -174,8 +184,6 @@ main {
     margin: 70px auto;
     color: var(--dark-color-100);
 }
-
-/*----- Cards -----*/
 
 .large_item {
     display: flex;
@@ -202,6 +210,7 @@ main {
     font-style: normal;
     margin: 15px;
 }
+
 
 /*----- Helpers -----*/
 
@@ -234,6 +243,13 @@ main {
 
 /*----- Menu -----*/
 
+#menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    grid-gap: 10px;
+    margin: 40px 0;
+}
+
 button {
     background-color: transparent;
     color: var(--light-color-100);
@@ -245,17 +261,8 @@ button {
     cursor: pointer;
 }
 
-/*----- Single view -----*/
-
-/*----- Info -----*/
-
-/*--------------------*/
-
-#menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    grid-gap: 10px;
-    margin: 40px 0;
+.button_chosen {
+    color: #D23D41;
 }
 
 .dish_container {
@@ -273,31 +280,11 @@ button {
     margin: 10px auto;
 }
 
-.origin {
-    font-style: italic;
-    margin-left: 5px;
-}
-
 .price {
     width: 100%;
     text-align: right;
     font-size: 16pt;
     color: #754242;
-}
-
-.content_page_container {
-    max-width: 1200px;
-    background-color: lightsteelblue;
-}
-
-.popup_info {
-    padding: 40px 30px 30px 30px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.button_chosen {
-    color: #D23D41;
 }
 
 .back_to_menu {
@@ -308,8 +295,7 @@ button {
 }
 
 
-
-
+/*----- Media queries -----*/
 
 @media only screen and (max-width: 1220px) {
     main,
@@ -382,6 +368,10 @@ button {
         margin: 0 15px;
     }
 
+    .large_text {
+        line-height: 5rem;
+    }
+
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -430,8 +420,4 @@ button {
         flex-basis: 160px;
         margin-right: 10px;
     }
-}
-
-.source {
-    margin-top: 20px;
 }
